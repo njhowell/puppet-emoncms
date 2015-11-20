@@ -19,9 +19,7 @@ class emoncms::prereqs {
         "ntp"
     ]
 
-    package { $prereq_packages:
-        ensure => latest,
-    }
+    ensure_packages { $prereq_packages }
 
 
     package {'redis':
